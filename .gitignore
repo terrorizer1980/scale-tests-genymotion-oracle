@@ -1,0 +1,29 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Unit test / coverage reports
+htmlcov/
+assets/
+.tox/
+.coverage
+.coverage.*
+.cache
+coverage.xml
+index.html
+geckodriver.log
+report.xml
+*.html
+
+#  Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+.idea/
+env/
+venv/
+node_modules/
+package-lock.json

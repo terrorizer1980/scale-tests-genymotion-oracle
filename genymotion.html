@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Genymotion Demo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@genymotion/device-web-player@1.4.3/dist/css/gm-player.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@genymotion/device-web-player@1.4.3/dist/js/gm-player.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <style>
+    .gm-template-player_partial {
+      min-height: 0px !important;
+      background-color: white !important;
+    }
+
+    .button.is-link {
+      background-color: #e6195e !important
+    }
+  </style>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <figure>
+            <img src="https://docs.genymotion.com/home-light.0644cffb.png">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="columns">
+    <div class="column">
+      <div class="card">
+        <div class="card-content login">
+          <p class="title">
+            instance 1
+          </p>
+          <div class="field">
+            <label class="label">Token</label>
+            <div class="control">
+              <input class="input token1" type="text"
+                value="DEMO-ocid1.image.oc1.iad.aaaaaaaabw5mcng36w3kifzdeqdvkvn5vfh2bubwy74nkyizfuzjanvguunq">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">IP address</label>
+            <div class="control">
+              <input class="input ip1" type="text" placeholder="IP address">
+            </div>
+          </div>
+          <div class="has-text-centered">
+            <a class="button is-link"
+              onclick="DisplayGenymotion('genymotion1', document.querySelector('input.token1').value, document.querySelector('input.ip1').value)">Display</a>
+          </div>
+
+        </div>
+        <div id="genymotion1"></div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <div class="card-content login">
+          <p class="title">
+            instance 2
+          </p>
+          <div class="field">
+            <label class="label">Token</label>
+            <div class="control">
+              <input class="input token2" type="text"
+                value="DEMO-ocid1.image.oc1.iad.aaaaaaaabw5mcng36w3kifzdeqdvkvn5vfh2bubwy74nkyizfuzjanvguunq">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">IP address</label>
+            <div class="control">
+              <input class="input ip2" type="text" placeholder="IP address">
+            </div>
+          </div>
+          <div class="has-text-centered">
+            <a class="button is-link"
+              onclick="DisplayGenymotion('genymotion2', document.querySelector('input.token2').value, document.querySelector('input.ip2').value)">Display</a>
+          </div>
+        </div>
+        <div id="genymotion2"></div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <div class="card-content login">
+          <p class="title">
+            instance 3
+          </p>
+          <div class="field">
+            <label class="label">Token</label>
+            <div class="control">
+              <input class="input token3" type="text"
+                value="DEMO-ocid1.image.oc1.iad.aaaaaaaabw5mcng36w3kifzdeqdvkvn5vfh2bubwy74nkyizfuzjanvguunq">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">IP address</label>
+            <div class="control">
+              <input class="input ip3" type="text" placeholder="IP address">
+            </div>
+          </div>
+          <div class="has-text-centered">
+            <a class="button is-link"
+              onclick="DisplayGenymotion('genymotion3', document.querySelector('input.token3').value, document.querySelector('input.ip3').value)">Display</a>
+          </div>
+        </div>
+        <div id="genymotion3"></div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <div class="card-content login">
+          <p class="title">
+            instance 4
+          </p>
+          <div class="field">
+            <label class="label">Token</label>
+            <div class="control">
+              <input class="input token4" type="text"
+                value="DEMO-ocid1.image.oc1.iad.aaaaaaaabw5mcng36w3kifzdeqdvkvn5vfh2bubwy74nkyizfuzjanvguunq">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">IP address</label>
+            <div class="control">
+              <input class="input ip4" type="text" placeholder="IP address">
+            </div>
+          </div>
+          <div class="has-text-centered">
+            <a class="button is-link"
+              onclick="DisplayGenymotion('genymotion4', document.querySelector('.input.token4').value, document.querySelector('input.ip4').value)">Display</a>
+          </div>
+        </div>
+        <div id="genymotion4"></div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <div class="card-content login">
+          <p class="title">
+            instance 5
+          </p>
+          <div class="field">
+            <label class="label">Token</label>
+            <div class="control">
+              <input class="input token5" type="text"
+                value="DEMO-ocid1.image.oc1.iad.aaaaaaaabw5mcng36w3kifzdeqdvkvn5vfh2bubwy74nkyizfuzjanvguunq">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">IP address</label>
+            <div class="control">
+              <input class="input ip5" type="text" placeholder="IP address">
+            </div>
+          </div>
+          <div class="has-text-centered">
+            <a class="button is-link"
+              onclick="DisplayGenymotion('genymotion5', document.querySelector('input.token5').value, document.querySelector('input.ip5').value)">Display</a>
+          </div>
+        </div>
+        <div id="genymotion5"></div>
+      </div>
+
+    </div>
+  </div>
+  <script>
+
+    const genymotion = new GenymotionManager();
+
+
+    function DisplayGenymotion(genymotion_div, token, ipaddress) {
+      console.log(genymotion_div); // writes “div”
+      console.log(token); // writes “token”
+      console.log(ipaddress); // write ipaddress
+
+      // See "Features & options" section for more details about options
+      const options = {
+        template: 'player_partial',    // template defines how player is displayed
+        token: token
+      };
+
+      // The URL addresses of your instances
+      const webrtcAddress = 'wss://' + ipaddress;
+
+      // Devive player instanciation
+
+      const instance = genymotion.setupInstance(document.getElementById(genymotion_div), // the container element or element ID to use
+        webrtcAddress,                         // the websocket address of your instance connector
+        options                               // options object to enable or disable features
+      );
+
+      // Disconnect the device player, closing any open data channels.
+      window.addEventListener('beforeunload', function () {
+        instance.disconnect();
+      });
+    };
+
+  </script>
+
+  <script type="text/javascript">
+
+    window.onload = function () {
+
+      function querySt(ji) {
+
+        hu = window.location.search.substring(1);
+        gy = hu.split("&");
+
+        for (i = 0; i < gy.length; i++) {
+          ft = gy[i].split("=");
+          if (ft[0] == ji) {
+            return ft[1];
+          }
+        }
+      }
+      var ip1 = querySt("ip1");
+      var ip2 = querySt("ip2");
+      var ip3 = querySt("ip3");
+      var ip4 = querySt("ip4");
+      var ip5 = querySt("ip5");
+
+      document.querySelector('input.ip1').value = ip1;
+      document.querySelector('input.ip2').value = ip2;
+      document.querySelector('input.ip3').value = ip3;
+      document.querySelector('input.ip4').value = ip4;
+      document.querySelector('input.ip5').value = ip5;
+    }
+  </script>
+
+
+
+
+</body>
+
+</html>
